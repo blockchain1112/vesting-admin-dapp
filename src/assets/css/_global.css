@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sa ns", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+/* Modals */
+.uk-modal-close-full {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 15px 0 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.uk-modal-close-full span {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #E9204F;
+  margin-right: .5rem;
+}
+
+/* Forms */
+.pr__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.pr__form *+.pr__form__group {
+  margin-top: 40px;
+}
+
+.pr__form label {
+  display: block;
+  font-size: 14px;
+}
+
+.pr__form label:not(.error) {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #101010;
+}
+
+.pr__form label.error {
+  color: red;
+}
+
+.pr__form label .required {
+  color: #E9204F;
+}
+
+.pr__form input,
+.pr__form .uk-select:not([multiple]):not([size]) {
+  width: calc(100% - 40px);
+  line-height: 52px;
+  height: 52px;
+  padding: 0 20px;
+  color: #747474;
+  background-color: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  outline: 0;
+}
+
+.pr__form input:hover,
+.pr__form .uk-select:not([multiple]):not([size]):hover {
+  border-color: #ACACAC;
+}
+
+.pr__form input:focus,
+.pr__form .uk-select:not([multiple]):not([size]):focus {
+  border-color: #E9204F;
+}
+
+.pr__form input.error,
+.pr__form .uk-select:not([multiple]):not([size]).error {
+  border-color: red;
+}
+
+.pr__form .uk-select:not([multiple]):not([size]) {
+  width: 100% !important;
+}
+
+.pr__form textarea {
+  width: calc(100% - 40px);
+  min-height: 200px;
+  color: #747474;
+  background-color: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  line-height: 1.612 !important;
+  padding: 20px;
+  resize: none;
+  overflow: auto;
+  outline: 0;
+}
+
+.pr__form textarea:hover {
+  border-color: #ACACAC;
+}
+
+.pr__form textarea:focus {
+  border-color: #E9204F;
+}
+
+.pr__form textarea.error {
+  border-color: red;
+}
+
+
+
+.pr__contact__form .form-outer {
+  padding-top: 60px;
+}
+
+.pr__contact__form .form-outer h2 {
+  margin-bottom: 0px;
+}
+
+.pr__contact__form .form-outer p {
+  margin-top: 5px;
+}
+
+.pr__contact__form.pr__dark .uk-modal-dialog {
+  background-color: #101010;
+}
+
+.pr__contact__form.pr__dark .form-outer h2 {
+  color: #FFFFFF;
+}
+
+.pr__contact__form.pr__dark .form-outer .pr__form label {
+  color: #FFFFFF;
+}
+
+.pr__contact__form.pr__dark .form-outer .pr__form input,
+.pr__contact__form.pr__dark .form-outer .pr__form select,
+.pr__contact__form.pr__dark .form-outer .pr__form textarea {
+  border-color: #FFFFFF;
+}
