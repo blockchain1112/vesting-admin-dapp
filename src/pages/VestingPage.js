@@ -44,7 +44,7 @@ import { LoadingButton } from "@mui/lab";
 const initalData = {
   amount: 100,
   beneficiary: "0xcbb5b792dF87D2057Bc490BB1f6c9d97cac05312",
-  revokable: false,
+  revokable: true,
   slicePeriod: 300,
   duration: 1800,
   cliff: 180,
@@ -509,12 +509,45 @@ const VestingPage = () => {
                     </Stack>
                   </Stack>
 
-                  <Stack spacing={1}>
-                    <Stack direction="row" spacing={1} className="title">
-                      <Typography variant="caption">SLICE PERIOD</Typography>
-                      <ErrorOutlineIcon />
-                    </Stack>
-                  </Stack>
+                  <Grid container>
+                    <Grid md={6} item>
+                      <Stack spacing={1}>
+                        <Stack direction="row" spacing={1} className="title">
+                          <Typography variant="caption">Revokable</Typography>
+                          <ErrorOutlineIcon />
+                        </Stack>
+                        <Switch
+                          checked={vestingData.revokable}
+                          onChange={() =>
+                            setVestingData({
+                              ...vestingData,
+                              revokable: !vestingData.revokable,
+                            })
+                          }
+                        />
+                      </Stack>
+                    </Grid>
+                    <Grid md={6} item>
+                      <Stack spacing={1}>
+                        <Stack direction="row" spacing={1} className="title">
+                          <Typography variant="caption">
+                            Vesting Cliff Compensation
+                          </Typography>
+                          <ErrorOutlineIcon />
+                        </Stack>
+                        <Switch
+                          checked={vestingData.vestingCliffCompensation}
+                          onChange={() =>
+                            setVestingData({
+                              ...vestingData,
+                              vestingCliffCompensation:
+                                !vestingData.vestingCliffCompensation,
+                            })
+                          }
+                        />
+                      </Stack>
+                    </Grid>
+                  </Grid>
 
                   <LoadingButton
                     loading={loading}
